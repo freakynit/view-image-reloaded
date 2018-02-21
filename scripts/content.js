@@ -4,4 +4,4 @@ s.src = "https://cdn.rawgit.com/freakynit/view-image-reloaded/master/dynload.js"
 s.id = "vir-dynloaded";
 s.async = false;
 s.defer = false;
-$("head").append(s);
+document.getElementsByTagName('head')[0].appendChild(s);

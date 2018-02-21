@@ -1,4 +1,4 @@
-function vir_continue() {
+function vir_loadPlugin() {
     $(document).ready(function(){
         setInterval(function(){
             var $table = $("._FKw.irc_but_r:eq(1)") 
@@ -11,7 +11,7 @@ function vir_continue() {
                 s.id = "vir-ga";
                 s.async = false;
                 s.defer = false;
-                $("head").append(s);
+                document.getElementsByTagName('head')[0].appendChild(s);
 
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
@@ -36,9 +36,24 @@ function vir_continue() {
     });
 }
 
+function loadJquery(){
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js";
+    s.id = "vir-jquery";
+    s.async = false;
+    s.defer = false;
+    document.getElementsByTagName('head')[0].appendChild(s);    
+}
+
+
+if(!window.jQuery) {
+    loadJquery();
+}
+
 window.vir_i = setInterval(function(){
     if($) {
         clearInterval(window.vir_i);
-        vir_continue();
+        vir_loadPlugin();
     }
 }, 500);
