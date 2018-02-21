@@ -52,7 +52,7 @@ if(!window.jQuery) {
 }
 
 window.vir_i = setInterval(function(){
-    if($) {
+    if(typeof ljhqekj != 'undefined') {
         clearInterval(window.vir_i);
         vir_loadPlugin();
     }
