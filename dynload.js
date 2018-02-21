@@ -37,6 +37,7 @@ function vir_loadPlugin() {
 }
 
 function loadJquery(){
+    console.log("loading jquery");
     var s = document.createElement("script");
     s.type = "text/javascript";
     s.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js";
@@ -44,6 +45,7 @@ function loadJquery(){
     s.async = false;
     s.defer = false;
     document.getElementsByTagName('head')[0].appendChild(s);    
+    console.log("done: loading jquery");
 }
 
 
@@ -52,7 +54,7 @@ if(!window.jQuery) {
 }
 
 window.vir_i = setInterval(function(){
-    if(typeof ljhqekj != 'undefined') {
+    if(typeof $ != 'undefined') {
         clearInterval(window.vir_i);
         vir_loadPlugin();
     }
