@@ -1,0 +1,3 @@
+Before Publishing:
+------------------
+1. Change dynload.js script url

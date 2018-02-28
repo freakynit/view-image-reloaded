@@ -1,6 +1,10 @@
 function vir_loadPlugin() {
     $(document).ready(function(){
+        //console.log("JQUERY DOCUMENT READY");
+
         setInterval(function(){
+            //console.log("COOKIES_2", document.cookie);
+
             var $table = $("._FKw.irc_but_r:eq(1)") 
             var $viewImageButton = $table.find(".view-image-reloaded");
 
@@ -47,13 +51,18 @@ function loadJquery(){
 }
 
 
+console.log("Hello aayush ;-)");
+
 if(!window.jQuery) {
+    //console.log("LOADING JQUERY");
     loadJquery();
 }
 
 window.vir_i = setInterval(function(){
     if(typeof $ != 'undefined') {
+        //console.log("JQUERY LOADED");
         clearInterval(window.vir_i);
+        //console.log("LOADING PLUGIN");
         vir_loadPlugin();
     }
 }, 500);
