@@ -18,7 +18,13 @@ function loadPlugin(){
         }
 
         if(typeof jQuery != 'undefined') {
-            var $table = $("._FKw.irc_but_r:eq(1)") 
+            var $table = null;
+            $table = $("._FKw.irc_but_r:eq(1)");
+
+            if($table.length < 1) {
+                $table = $(".iAcjwd.irc_but_r:eq(1)")
+            }
+
             if($table.length > 0) {
                 
                 var $viewImageButton = $table.find(".view-image-reloaded");
